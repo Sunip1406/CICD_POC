@@ -1,0 +1,16 @@
+{
+  "dev": {
+    "snowflake_account": "yourgr37324.ap-south-1.aws_dev_account.snowflakecomputing.com",
+    "snowflake_user": "SD89445",
+    "snowflake_password": "Accenture@2010",
+    "snowflake_database": "CICD_DEV",
+    "snowflake_schema": "DEV_DB"
+  },
+  "prod": {
+    "snowflake_account": "your_gr37324.ap-south-1.awsprod_account.snowflakecomputing.com",
+    "snowflake_user": "SD89445",
+    "snowflake_password": "Accenture@2010",
+    "snowflake_database": "CICD_PROD",
+    "snowflake_schema": "PROD_DB"
+  }
+}
