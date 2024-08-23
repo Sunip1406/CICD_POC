@@ -19,9 +19,7 @@ def run_schemachange(stage):
         "-p", config["snowflake_password"],
         "-d", config["snowflake_database"],
         "-s", config["snowflake_schema"],
-        "--change-history-table", f"{config['snowflake_database']}.{config['snowflake_schema']}.change_history",
-        "--vars", f"STAGE={stage}"  # Optional: Custom variables for environment
-    ]
+        "--change-history-table", f"{config['snowflake_database']}.{config['snowflake_schema']}.change_history"  
     
     try:
         subprocess.run(command, check=True)
