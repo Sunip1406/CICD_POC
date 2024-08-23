@@ -1,0 +1,1 @@
+schemachange==3.0.0  # Adjust the version according to your needs

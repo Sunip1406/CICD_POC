@@ -3,7 +3,7 @@ name: snowflake-devops-demo
 on:
   push:
     branches:
-      - dev
+      - DEV_changes
       - main
 
 jobs:
@@ -23,8 +23,8 @@ jobs:
       run: |
         pip install schemachange
 
-    - name: Deploy to Dev
-      if: github.ref == 'refs/heads/dev'
+    - name: Deploy to DEV_changes
+      if: github.ref == 'refs/heads/DEV_changes'
       run: python schemachange_runner.py dev
 
     - name: Deploy to Prod
