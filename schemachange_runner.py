@@ -20,6 +20,7 @@ def run_schemachange(stage):
         "-d", config["snowflake_database"],
         "-s", config["snowflake_schema"],
         "--change-history-table", f"{config['snowflake_database']}.{config['snowflake_schema']}.change_history"  
+             ]
     
     try:
         subprocess.run(command, check=True)
