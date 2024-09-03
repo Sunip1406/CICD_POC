@@ -27,7 +27,7 @@ def replace_placeholders(template_content, config_data):
         template_content = template_content.replace(placeholder, value)
     return template_content
 
-def main():
+def run_schemachange(stage):
     # Read the template file
     template_content = read_template(template_path)
 
@@ -40,8 +40,7 @@ def main():
     # Write the resulting configuration to the output file
     write_config(config_content, output_path)
 
-if __name__ == '__main__':
-    main()
+
 
 def run_schemachange(stage):
     config = load_config(stage)
