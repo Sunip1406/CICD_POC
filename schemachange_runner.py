@@ -43,7 +43,7 @@ def run_schemachange(stage):
     
     command = [
         "schemachange","-f", "snowflake_changes",
-        "--config","CICD_POC/schemachange.yml"
+        "--config","schemachange.yml"
           # Path to the change scripts
              ]
     
