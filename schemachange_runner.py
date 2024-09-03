@@ -46,16 +46,18 @@ def run_schemachange(stage):
     config = load_config(stage)
     
     command = [
-        "schemachange apply",
+        "schemachange","apply",
         "--config","CICD_POC/schemachange.yml",
         "-f", "snowflake_changes"  # Path to the change scripts
              ]
     
     try:
-        subprocess.run(command, check=True)
+        # Run the command
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
         print(f"SchemaChange executed successfully for {stage}.")
+        print("Output:", result.stdout)
     except subprocess.CalledProcessError as e:
-        print(f"SchemaChange failed: {e}")
+        print(f"SchemaChange failed: {e.stderr}")
         sys.exit(1)
 
 if __name__ == "__main__":
