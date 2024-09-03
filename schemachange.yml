@@ -1,1 +1,7 @@
-
+snowflake:
+  account: gr37324.ap-south-1.aws
+  user: SD89445
+  password: Accenture@2010
+  database: CICD_DEV
+  schema: DEV_DB
+  change_history_table: CICD_DEV.DEV_DB.change_history
