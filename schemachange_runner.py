@@ -12,7 +12,7 @@ def run_schemachange(stage):
     config = load_config(stage)
     
     command = [
-        "schemachange apply",
+        "schemachange ",
         "-f", "snowflake_changes",  # Path to the change scripts
         "--account", config["snowflake_account"],
         "-u", config["snowflake_user"],
