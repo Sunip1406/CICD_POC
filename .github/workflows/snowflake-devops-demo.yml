@@ -25,8 +25,8 @@ jobs:
 
     - name: Deploy to DEV_changes
       if: github.ref == 'refs/heads/dev_cicd_1'
-      run: python schemachange_runner.py dev
+      run: python schemachange_runner2.py dev
 
     - name: Deploy to Prod
       if: github.ref == 'refs/heads/main'
-      run: python schemachange_runner.py prod
+      run: python schemachange_runner2.py prod
