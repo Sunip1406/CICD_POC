@@ -3,8 +3,8 @@ import json
 import sys
 import os
 
-template_path = 'CICD_POC/schemachange.template.yml'
-output_path = 'CICD_POC/schemachange.yml'
+template_path = 'schemachange.template.yml'
+output_path = 'schemachange.yml'
 
 def read_template(template_path):
     with open('schemachange.template.yml', 'r') as file:
