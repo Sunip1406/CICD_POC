@@ -1,8 +1,7 @@
 snowflake:
-  account: {{SNOWFLAKE_ACCOUNT}}
-  user: {{SNOWFLAKE_USER}}
-  password: {{SNOWFLAKE_PASSWORD}}
-  warehouse: {{SNOWFLAKE_WAREHOUSE}}
-  database: {{SNOWFLAKE_DATABASE}}
-  schema: {{SNOWFLAKE_SCHEMA}}
-  change_history_table: {{SNOWFLAKE_CHANGE_HISTORY_TABLE}}
+  account: {{snowflake_account}}
+  user: {{snowflake_user}}
+  password: {{snowflake_password}}
+  database: {{snowflake_database}}
+  schema: {{snowflake_schema}}
+  change_history_table: {{change_history_table}}
