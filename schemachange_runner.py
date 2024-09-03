@@ -40,10 +40,6 @@ def run_schemachange(stage):
     # Write the resulting configuration to the output file
     write_config(config_content, output_path)
 
-
-
-def run_schemachange(stage):
-    config = load_config(stage)
     
     command = [
         "schemachange","-f", "snowflake_changes",
