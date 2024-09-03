@@ -27,7 +27,7 @@ def replace_placeholders(template_content, config_data):
         template_content = template_content.replace(placeholder, value)
     return template_content
 
-def run_schemachange(stage):
+def config_schemachange(stage):
     # Read the template file
     template_content = read_template(template_path)
 
@@ -40,6 +40,9 @@ def run_schemachange(stage):
     # Write the resulting configuration to the output file
     write_config(config_content, output_path)
 
+def run_schemachange(stage):
+    
+    config_schemachange(stage)
     
     command = [
         "schemachange","-f", "snowflake_changes",
