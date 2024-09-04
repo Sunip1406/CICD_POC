@@ -16,7 +16,8 @@ def run_schemachange(stage):
         "-f", "snowflake_changes",  # Path to the change scripts
         "-a", config["snowflake_account"],
         "-u", config["snowflake_user"],
-        "--password", config["snowflake_password"],
+        "-r", config["snowflake_role"],
+        "-w", config["snowflake_warehouse"],
         "-d", config["snowflake_database"],
         "-s", config["snowflake_schema"],
         "--change-history-table", f"{config['snowflake_database']}.{config['snowflake_schema']}.change_history"  
