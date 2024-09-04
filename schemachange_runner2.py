@@ -20,7 +20,8 @@ def run_schemachange(stage):
         "-w", config["snowflake_warehouse"],
         "-d", config["snowflake_database"],
         "-s", config["snowflake_schema"],
-        "--change-history-table", f"{config['snowflake_database']}.{config['snowflake_schema']}.change_history"  
+        "-c", f"{config['snowflake_database']}.schemachange.change_history",
+        "--create-change-history-table"  
              ]
     
     try:
