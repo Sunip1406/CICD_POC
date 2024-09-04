@@ -3,7 +3,7 @@ name: snowflake-devops-demo
 on:
   push:
     branches:
-      - DEV_changes
+      - dev_cicd_1
       - main
 
 jobs:
@@ -24,9 +24,13 @@ jobs:
         pip install schemachange
 
     - name: Deploy to DEV_changes
-      if: github.ref == 'refs/heads/DEV_changes'
-      run: python schemachange_runner.py dev
+      env: 
+          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+      if: github.ref == 'refs/heads/dev_cicd_1'
+      run: python schemachange_runner2.py dev
 
     - name: Deploy to Prod
+      env: 
+          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       if: github.ref == 'refs/heads/main'
-      run: python schemachange_runner.py prod
+      run: python schemachange_runner2.py prod

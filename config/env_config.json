@@ -1,16 +1,22 @@
 {
   "dev": {
-    "snowflake_account": "yourgr37324.ap-south-1.aws_dev_account.snowflakecomputing.com",
+    "snowflake_account": "gr37324.ap-south-1.aws",
     "snowflake_user": "SD89445",
     "snowflake_password": "Accenture@2010",
     "snowflake_database": "CICD_DEV",
-    "snowflake_schema": "DEV_DB"
+    "snowflake_schema": "DEV_DB",
+    "snowflake_role": "ACCOUNTADMIN",
+    "snowflake_warehouse": "COMPUTE_WH",
+    "change_history_table": "CICD_DEV.DEV_DB.change_history"
   },
   "prod": {
-    "snowflake_account": "your_gr37324.ap-south-1.awsprod_account.snowflakecomputing.com",
+    "snowflake_account": "gr37324.ap-south-1.aws",
     "snowflake_user": "SD89445",
     "snowflake_password": "Accenture@2010",
     "snowflake_database": "CICD_PROD",
-    "snowflake_schema": "PROD_DB"
+    "snowflake_schema": "PROD_DB",
+    "snowflake_role": "ACCOUNTADMIN",
+    "snowflake_warehouse": "COMPUTE_WH",
+    "change_history_table": "CICD_PROD.PROD_DB.change_history"
   }
 }

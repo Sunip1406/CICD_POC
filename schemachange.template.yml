@@ -1,0 +1,7 @@
+snowflake:
+  snowflake_account: {{snowflake_account}}
+  snowflake_user: {{snowflake_user}}
+  snowflake_password: {{snowflake_password}}
+  snowflake_database: {{snowflake_database}}
+  snowflake_schema: {{snowflake_schema}}
+  change_history_table: {{change_history_table}}
