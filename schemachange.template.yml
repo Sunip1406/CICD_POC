@@ -4,4 +4,6 @@ snowflake:
   snowflake_password: {{snowflake_password}}
   snowflake_database: {{snowflake_database}}
   snowflake_schema: {{snowflake_schema}}
+  snowflake_role: {{snowflake_role}},
+  snowflake_warehouse: {{snowflake_warehouse}},
   change_history_table: {{change_history_table}}

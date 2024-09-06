@@ -27,10 +27,10 @@ jobs:
       env: 
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       if: github.ref == 'refs/heads/dev_cicd_1'
-      run: python schemachange_runner2.py dev
+      run: python schemachange_runner.py dev
 
     - name: Deploy to Prod
       env: 
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
       if: github.ref == 'refs/heads/main'
-      run: python schemachange_runner2.py prod
+      run: python schemachange_runner.py prod
